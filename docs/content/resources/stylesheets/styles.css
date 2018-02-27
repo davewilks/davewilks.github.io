@@ -1,0 +1,303 @@
+/*<meta />*/
+
+@namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
+
+body
+{
+	color: #404040;
+	font-family: Arial;
+	font-size: .9em;
+	line-height: 1.7em;
+}
+
+a:link
+{
+	color: #2D8DCC;
+	font-weight: bold;
+}
+
+a:visited
+{
+	color: #2D8DCC;
+}
+
+a:hover
+{
+	color: #BED230;
+}
+
+a:active
+{
+	color: #2D8DCC;
+}
+
+a.MCBreadcrumbsLink
+{
+	font-style: italic;
+	text-decoration: underline;
+}
+
+a.MCBreadcrumbsLink:hover
+{
+	color: #BED230;
+}
+
+div.TopicContent
+{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+h1
+{
+	font-size: 1.5em;
+	font-weight: normal;
+	margin-bottom: 8px;
+	margin-top: 20px;
+	padding-bottom: 10px;
+	border-bottom: 4px solid #BED230;
+}
+
+h2
+{
+	border-bottom: none;
+	border-top: none;
+	color: #404040;
+	font-family: Arial;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-bottom: 4px;
+	margin-top: 20px;
+}
+
+h3
+{
+	font-size: 1.1em;
+	margin-bottom: 4px;
+	margin-top: 16px;
+}
+
+h4
+{
+	margin-bottom: 4px;
+	margin-top: 12px;
+}
+
+li
+{
+	margin-bottom: 6px;
+	margin-top: 6px;
+}
+
+MadCap|breadcrumbsProxy
+{
+	border-bottom: none;
+	font-size: .7em;
+	font-style: italic;
+	mc-breadcrumbs-prefix: 'You are here: ';
+}
+
+MadCap|conceptLink
+{
+	color: #404040;
+	font-size: 0.8em;
+	font-weight: bold;
+	mc-image: url('../images/listicon.png');
+	mc-label: 'SEE ALSO';
+	padding-top: 8px;
+	text-decoration: none;
+}
+
+MadCap|conceptLink:hover
+{
+	color: #BED230;
+	font-weight: bold;
+}
+
+MadCap|xref
+{
+	color: #2D8DCC;
+	font-weight: bold;
+	mc-format: '{para}';
+	text-decoration: underline;
+}
+
+MadCap|xref:hover
+{
+	color: #BED230;
+}
+
+ol,
+ul
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 10pt;
+}
+
+p
+{
+	font-family: Arial;
+	font-size: 1em;
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+p.toptable
+{
+	margin-top: 0pt;
+	font-size: 9pt;
+	margin-bottom: 0pt;
+}
+
+td
+{
+	margin: 8px;
+	vertical-align: top;
+}
+
+@media non-print
+{
+	p
+	{
+		margin-top: 3px;
+		margin-bottom: 3px;
+		height: 1.2em;
+	}
+
+	h1
+	{
+		border-bottom: solid 0.25in;
+		border-style: solid;
+		border-bottom-color: #bed230;
+	}
+}
+
+p.note
+{
+	font-size: 11pt;
+	margin-top: 1em;
+	margin-bottom: 12px;
+	margin-left: 40px;
+	text-indent: -50px;
+	mc-auto-number-offset: 10px;
+	border-top-style: solid;
+	border-top-width: 0px;
+	border-bottom-style: solid;
+	border-bottom-width: 0px;
+	padding-left: 30px;
+	padding-right: 20px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	mc-auto-number-class: TWTeal;
+	mc-auto-number-format: 'NOTE ';
+}
+
+span.TWTeal
+{
+	color: #00b4af;
+	font-weight: bold;
+	font-style: normal;
+}
+
+img.InLineIcon
+{
+	width: auto;
+	height: auto;
+	max-height: 19px;
+	vertical-align: bottom;
+}
+
+img.MaxWidth100Percent
+{
+	border-color: #000000;
+	max-width: 850px;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-left-color: #000000;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-right-color: #000000;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-top-color: #000000;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	mc-thumbnail-max-height: 100px;
+	mc-thumbnail-max-width: 100px;
+	mc-thumbnail: popup;
+}
+
+p.noteIndent
+{
+	font-size: 11pt;
+	margin-top: 1em;
+	margin-bottom: 12px;
+	margin-left: 68px;
+}
+
+p.indent
+{
+	font-size: 11pt;
+	margin-left: 42px;
+}
+
+p.thirdbulletIndent
+{
+	font-size: 11pt;
+	margin-top: 1em;
+	margin-bottom: 12px;
+	margin-left: 78px;
+}
+
+p.tip
+{
+	font-size: 11pt;
+	margin-top: 0em;
+	margin-bottom: 12px;
+	/*text-indent: -40px;*/
+	mc-auto-number-offset: 25px;
+	border-top-style: solid;
+	border-top-width: 0px;
+	border-bottom-style: solid;
+	border-bottom-width: 0px;
+	padding-right: 40px;
+	padding-top: 0px;
+	padding-bottom: 14px;
+	mc-auto-number-class: TWTeal;
+	mc-auto-number-format: 'TIP';
+	padding-left: 5px;
+	margin-left: 10px;
+}
+
+p.code
+{
+	font-family: 'Courier New';
+	font-size: 10pt;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+@media print
+{
+	MadCap|breadcrumbsProxy
+	{
+		mc-breadcrumbs-prefix: ' ';
+	}
+
+	img.thumbnail
+	{
+		mc-thumbnail-max-height: 100px;
+		mc-thumbnail-max-width: 100px;
+		mc-thumbnail: hover;
+	}
+}
+
+img.thumbnail
+{
+	mc-thumbnail: hover;
+	mc-thumbnail-max-height: 100px;
+	mc-thumbnail-max-width: 100px;
+}
+

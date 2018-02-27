@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="reference" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Authoring Tools|Flare">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Working with Glossaries</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../resources/tablestyles/kbtable2.css" rel="stylesheet" />
+        <link href="../resources/stylesheets/styles.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapGlobal.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapDom.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapUtilities.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapXhr.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapTextEffects.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapSlideshow.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapFeedback.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapDefault.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapHelpSystem.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapToc.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapIndex.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapGlossary.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapParser.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapSearch.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapTopic.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../Default.htm#processes/glossaries.htm">Open topic with navigation</a>
+        </p>
+        <div class="TopicContent">
+            <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><span class="MCBreadcrumbsSelf">Authoring Tools</span><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbsSelf">Flare</span><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Glossaries</span>
+            </div>
+            <h1>Glossaries</h1>
+            <h2>Summary:</h2>
+            <p>Use the glossary feature for terms that are esoteric industry concepts or internal Towers Watson jargon.
+</p>
+            <h2>Full Description:</h2>
+            <p>This section describes how to <a href="#Create" class="selected">create a glossary term</a> and <a href="#Using" class="selected">set up variant glossaries</a>.</p>
+            <p>When working with glossary terms, note the following information:</p>
+            <ul>
+                <li value="1">You can create auxiliary glossaries to use exclusively for inline hover popups. For example, extra glossaries can be useful for UI element definitions. You can exclude these glossaries from the build to prevent the terms from appearing in the output Glossary navigation tab. </li>
+                <li value="2">Currently, Flare has a known limitation when using variants (for example, plurals) in the primary glossary: there is no way to exclude them from the navigation-tab list. You must use a supplemental glossary for variations of glossary terms (see <a href="#Using" class="selected">Using a Variants Glossary</a>). Future Flare versions may provide a way to specify "master" terms among listed variants in the same glossary, in order to exclude non-master variations from the output Glossary list.</li>
+            </ul>
+            <h2>Solution:</h2>
+            <h3><a name="Create"></a>Create a Glossary Term</h3>
+            <p>To create a glossary term:</p>
+            <ol>
+                <li value="1">Open the Glossary in the Project Organizer:<ul><li value="1">TRSS1 - TRSS Glossary</li><li value="2">CompConnect - Glossary</li></ul></li>
+                <li value="2">In the Glossary editor, click <b>New Item</b>.</li>
+                <li value="3">In the <b>Terms</b> box, enter the glossary term.</li>
+                <li value="4">Enter the definition of the term in the <b>Definition</b> box. </li>
+                <li value="5">Click <b>OK</b>, and then save the Glossary file.</li>
+                <li value="6">(Optional) Add anticipated variants of the term in a separate glossary (see <a href="#Using" class="selected">Using a Variants Glossary</a>).</li>
+                <p class="note" data-mc-autonum="NOTE "><span class="autonumber"><span class="TWTeal">NOTE </span></span>You can also create glossary items on the fly. Just type the word, highlight it, and select <b>Insert |Glossary Term Link</b>.  Fill in the definition and choose the glossary where the term should be listed.</p>
+                <li value="7">In Flare, highlight the first instance of the glossary term in the text (excluding the title) of your topic, and then click <b>Glossary Term Link</b> on the Insert ribbon.</li>
+            </ol>
+            <h3><a name="Using"></a>Using a Variants Glossary</h3>
+            <p>For the current version of Flare (10.x, 11.x), use a separate glossary for syntactic variations on terms in the main glossary. Variations should account for capitalized and plural forms of the word. For example, for the term aging date, add aging date, Aging date, aging dates, and Aging dates.</p>
+            <p>You can either add variants in advance or add them as you need them (if you know that the root term exists in the main glossary used for the build).</p>
+            <p>To add a variant glossary term:</p>
+            <ol>
+                <li value="1">Open the variant glossary in the Project Organizer:<ul><li value="1"><b>TRSS1</b>- Variants</li><li value="2"><b>CompConnect</b> - VariantGlossary</li></ul></li>
+                <li value="2">In the Glossary editor, click <b>New Item</b>.</li>
+                <li value="3">In the <b>Terms</b> box, enter the variant glossary term(s). Enter multiple entries on new lines.</li>
+                <li value="4">If the entries are restricted to plural/singular or capitalization variations, leave the <b>Definition</b> box blank.</li>
+                <p>Other variations, such as shortened terms, require definitions copied from the primary Glossary. This is not recommended–better to use both variations in the main glossary entry if it is reasonable for both terms to appear in the output Navigation panel, or rephrase the content.</p>
+                <li value="5">Click <b>OK</b>, save the glossary, and then check it in.</li>
+                <p class="note" data-mc-autonum="NOTE "><span class="autonumber"><span class="TWTeal">NOTE </span></span>Hovering over the glossary-linked item in the source file shows "def = " (no definition). However, Flare presents the root-term definition, in the main glossary, in the hover popup in output (built user view). Note that the term does not indicate the hover link in the quick topic preview.</p>
+            </ol>
+            <p>To add variants on the fly:</p>
+            <ol>
+                <li value="1">Enter the word in the topic file, and then highlight it.</li>
+                <li value="2">From the <b>Insert</b> menu, select <b>Glossary Term Link</b>. If the word is not already in a glossary, an entry dialog box appears.</li>
+                <li value="3">Select the variants glossary file (leave the <b>Definition</b> box blank for plural/singular and case variations).</li>
+                <li value="4">Click <b>OK</b>.</li>
+            </ol>
+            <h2>Attribution:</h2>
+            <table style="width: 100%;caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../resources/tablestyles/kbtable2.css');" summary="Last updated and author information" class="TableStyle-KBTable2" cellspacing="0">
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-KBTable2-Head-Header1">
+                        <th class="TableStyle-KBTable2-HeadE-Column1-Header1">
+                            <p class="toptable"><b>Last updated:</b>
+                            </p>
+                        </th>
+                        <th class="TableStyle-KBTable2-HeadE-Column1-Header1">
+                            <p class="toptable"><b>Product:</b>
+                            </p>
+                        </th>
+                        <th class="TableStyle-KBTable2-HeadE-Column1-Header1">
+                            <p class="toptable"><b>Author: </b>
+                            </p>
+                        </th>
+                        <th class="TableStyle-KBTable2-HeadD-Column1-Header1">
+                            <p class="toptable"><b>Contributions by: </b>
+                            </p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-KBTable2-Body-Body1">
+                        <td class="TableStyle-KBTable2-BodyB-Column1-Body1">
+                            <p class="toptable">09/11/2015</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyB-Column1-Body1">
+                            <p>&#160;</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyB-Column1-Body1">
+                            <p class="toptable">MC, SH. DW</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyA-Column1-Body1">
+                            <p class="toptable">same</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="font-size: 6pt;margin-top: 0;margin-bottom: 0;">&#160;</p>
+            <p class="copyright" style="font-size: 9pt;">Copyright © <span class="MyVariablesYear">2016</span>&#160;<span class="MyVariablesCompanyName">Willis Towers Watson</span> All rights reserved.</p>
+        </div>
+    </body>
+</html>

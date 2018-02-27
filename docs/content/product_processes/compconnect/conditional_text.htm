@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="reference" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Authoring Tools|Flare">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Conditional Text for Roles</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../resources/tablestyles/kbtable2.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapGlobal.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapDom.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapUtilities.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapXhr.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTextEffects.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSlideshow.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapFeedback.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapDefault.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapHelpSystem.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapIndex.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapGlossary.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapParser.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSearch.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTopic.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#product_processes/compconnect/conditional_text.htm">Open topic with navigation</a>
+        </p>
+        <div class="TopicContent">
+            <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><span class="MCBreadcrumbsSelf">Authoring Tools</span><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbsSelf">Flare</span><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Conditional Text for Roles</span>
+            </div>
+            <h1>Conditional Text for Roles</h1>
+            <h2>Summary:</h2>
+            <p>Compensation Software has some complex conditional text needs to provide help based on the user's role.</p>
+            <h2>Full Description:</h2>
+            <p>Compensation Software includes 3 targets to publish help for users who have the Global Grading feature set ( Role_GGS), the Market Analysis feature set (Role_MA), or both (Role_MA_and_GGS). Each target includes a specific set of conditional text roles to generate the appropriate text. Click the image to see which conditions are included or excluded.</p>
+            <p><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../processes/images/role_ma_and_ggs.png"><img class="MCPopupThumbnail img imgthumbnail" data-mc-width="411" data-mc-height="411" src="../../processes/images/role_ma_and_ggs_thumb_100_100.png" style="mc-thumbnail: popup;" tabindex="" /></a> <a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../processes/images/role_ggs.png"><img class="MCPopupThumbnail img imgthumbnail" data-mc-width="411" data-mc-height="411" src="../../processes/images/role_ggs_thumb_100_100.png" style="mc-thumbnail: popup;" tabindex="" /></a> <a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../processes/images/role_ma.png"><img class="MCPopupThumbnail img imgthumbnail" data-mc-width="411" data-mc-height="411" src="../../processes/images/role_ma_thumb_100_100.png" style="mc-thumbnail: popup;" tabindex="" /></a></p>
+            <p>The descriptions of the different Role conditions are included in the Flare project. The examples below supplement that information:</p>
+            <ul>
+                <li value="1"><b>Using the GGS and Market_Analysis conditions</b>: These conditions should cover 90% of all cases. <ul><li value="1"><p>If an entire topic applies to only one role, conditionalize it at the topic level using either the GGS  or Market_Analysis condition. This is the only circumstance where you should apply a condition at the target level. <br />See <b>Jobs &gt; Job Leveling &gt; Assigning_a_Business_Unit_to_One_Job</b>.</p></li><li value="2">If a paragraph or a larger chunk of content applies to only one role, conditionalize the content block.<br />See <b>Jobs &gt; Managing Jobs &gt; Adding_and_Copying_Jobs</b>.</li><li value="3">If content within a paragraph applies to only one role, DO&#160;NOT automatically conditionalize it. Consider whether you should or should not conditionalize. Most of the time the answer is no, it is too granular.<br />See <b>Jobs &gt; Managing Jobs &gt; Deleting_a_Job</b> and <b>Jobs &gt; Managing Jobs &gt; Adding_and_Copying_Jobs</b>.</li><li value="4"><p>If a warning is related to functionality not available to one role, conditionalize it.<br />See <b>Jobs &gt; Managing Jobs &gt; Adding_and_Copying_Jobs</b>.</p></li></ul></li>
+                <li value="2"><b>Using the GGS_Only, MA_Only, and GGS_and_MA conditions</b>: If a Topic contains content that meets all three of the conditions listed below, you can use these conditions. You must use all three; if you only need two, use the main GGS or Market_Analysis conditions. See the Getting Started topic for an example.<ul><li value="1">The topic contains content only for GGS users.</li><li value="2">The topic contains content only for Market_Analysis users.</li><li value="3">The topic contains content only for users who have both GGS&#160;and Market_Analysis.</li></ul></li>
+            </ul>
+            <p>A few more rules about the GGS_Only, MA_Only, and GGS_and_MA conditions.</p>
+            <ul>
+                <li value="1">Never use GGS in the same topic that has GGS_Only; same for Market_Analysis content.</li>
+                <li value="2">Do not use topic-level conditions on topics with these conditions.</li>
+                <li value="3">Use all three in a topic. Otherwise, you don't need to use them at all.</li>
+            </ul>
+            <p class="note" data-mc-autonum="NOTE "><span class="autonumber"><span class="TWTeal">NOTE </span></span> Do not put conditional text in Expanding Text as Flare embeds an additional expanding body element (with text only and an empty head tag) and this causes errors in the build process.</p>
+            <p>Check your work! Preview the topic using the appropriate target to see if a topic displays what you think it should. </p>
+            <p>
+                <img src="../../processes/images/preview_target.png" />
+            </p>
+            <h2>Attribution:</h2>
+            <table style="width: 100%;caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../resources/tablestyles/kbtable2.css');" summary="Last updated and author information" class="TableStyle-KBTable2" cellspacing="0">
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-KBTable2-Head-Header1">
+                        <th class="TableStyle-KBTable2-HeadE-Column1-Header1">
+                            <p class="toptable"><b>Last updated:</b>
+                            </p>
+                        </th>
+                        <th class="TableStyle-KBTable2-HeadE-Column1-Header1">
+                            <p class="toptable"><b>Product:</b>
+                            </p>
+                        </th>
+                        <th class="TableStyle-KBTable2-HeadE-Column1-Header1">
+                            <p class="toptable"><b>Author: </b>
+                            </p>
+                        </th>
+                        <th class="TableStyle-KBTable2-HeadD-Column1-Header1">
+                            <p class="toptable"><b>Contributions by: </b>
+                            </p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-KBTable2-Body-Body1">
+                        <td class="TableStyle-KBTable2-BodyB-Column1-Body1">
+                            <p class="toptable">5/20/2016</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyB-Column1-Body1">
+                            <p class="toptable">Compensation Software</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyB-Column1-Body1">
+                            <p class="toptable">Dave Wilks</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyA-Column1-Body1">
+                            <p class="toptable">Dave Wilks</p>
+                            <p class="toptable">Paris Gorman</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="font-size: 6pt;margin-top: 0;margin-bottom: 0;">&#160;</p>
+            <p class="copyright" style="font-size: 9pt;">Copyright © <span class="MyVariablesYear">2016</span>&#160;<span class="MyVariablesCompanyName">Willis Towers Watson</span> All rights reserved.</p>
+        </div>
+    </body>
+</html>

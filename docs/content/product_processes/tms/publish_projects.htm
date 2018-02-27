@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="reference" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Publications|TMS Help">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Schedule and Publish TMS</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../resources/tablestyles/kbtable2.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapGlobal.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapDom.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapUtilities.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapXhr.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTextEffects.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSlideshow.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapFeedback.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapDefault.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapHelpSystem.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapIndex.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapGlossary.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapParser.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSearch.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTopic.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#product_processes/tms/publish_projects.htm">Open topic with navigation</a>
+        </p>
+        <div class="TopicContent">
+            <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><span class="MCBreadcrumbsSelf">Publications</span><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbsSelf">TMS Help</span><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Schedule and Publish TMS</span>
+            </div>
+            <h1>Schedule and Publish TMS</h1>
+            <div style="width: 180px;height: 150px;clear: right;float: right;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;border-top-left-radius: 5px;border-top-right-radius: 5px;padding-left: 5px;padding-right: 1px;padding-top: 1px;padding-bottom: 1px;border-left-style: solid;border-left-width: 1px;border-right-style: solid;border-right-width: 1px;border-top-style: solid;border-top-width: 1px;border-bottom-style: solid;border-bottom-width: 1px;">
+                <address><a href="#Scheduling" class="selected">Schedule Batch</a>
+                </address>
+                <address><a href="#Setting_Up_the_Windows_Scheduler%0A________" class="selected">Windows Scheduler</a>
+                </address>
+                <address><a href="#Help" class="selected">Reviewer Site</a>
+                </address>
+                <address><a href="#To_publish_manually" class="selected">Publish Manually</a>
+                </address>
+                <address><a href="#TMS_Environments" class="selected">New Help Environments</a>
+                </address>
+                <address><a href="#Troubleshooting" class="selected">Troubleshooting</a>
+                </address>
+            </div>
+            <h2>Summary</h2>
+            <p>Describes the process of publishing the TMS/TRSS project including times published and the steps to publish in Flare.</p>
+            <h2>Overview</h2>
+            <p>For TMS, we use a <a href="#Scheduling" class="selected">scheduled batch process</a> to build and publish the Flare project for peer and functional reviews, currently two times a day—Denver MST 6 PM and 10 PM which is Manila PHT 8 AM and 12 PM. Near the end of the release cycle (typically two weeks before the release date), the batch is expanded to include a QA target environment, a semi-frozen web-server location where we test and verify the help before publishing it to the "live" production environment. See <a href="deploy_help.htm">Deploying Help</a>.</p>
+            <p class="note" data-mc-autonum="NOTE "><span class="autonumber"><span class="TWTeal">NOTE </span></span>All writers must remember to add any new topic files to the Flare TOC used to build the help output for reviews:  <b>Project Organizer &gt; TOCs &gt; TRSS - Reviews</b>.  Writers who have added new topics to the TOC or revised topics are also responsible for verifying the published output (see locations below).</p>
+            <h3><a name="Scheduling"></a>Schedule the Batch Job
+        </h3>
+            <p>The designated build owner follows this procedure to set up a batch schedule:</p>
+            <ol>
+                <li value="1">Check out and open the batch build file in Flare: <b>Project Organizer &gt; Targets &gt; BatchTRSSforReviews</b>.</li>
+                <li value="2">In the left-side navigation, click <b>Schedule</b>,and then click <b>New</b>.<p><a class="MCPopupThumbnailLink MCPopupThumbnailHover" href="../../processes/images/new_target_batch.png"><img class="MCPopupThumbnail img imgthumbnail" data-mc-width="614" data-mc-height="427" src="../../processes/images/new_target_batch_thumb_100_100.png" tabindex="" /></a></p></li>
+                <li value="3">Configure the timer for builds; for daily builds at 6 PM and 10 PM, use the settings shown above. Revise as requirements change, for example, fewer writers working might mean once one or two days weekly is sufficient.</li>
+                <li value="4">Click <b>OK</b>.</li>
+                <li value="5">Keep the file checked out and locked for as long as you own the daily build (to signal others not to use it, see note below). If you pass the job on, clear the <b>Enabled</b> check box in the scheduling window and check the file in. Then someone else can manage the build.</li>
+            </ol>
+            <p class="note" data-mc-autonum="NOTE "><span class="autonumber"><span class="TWTeal">NOTE </span></span>Do not create and check in any other batch targets for reviews.  Their setup won't be any different than the current one and can cause schedule conflicts and unexpected behavior on your own and other machines.</p>
+            <p class="note" data-mc-autonum="NOTE "><span class="autonumber"><span class="TWTeal">NOTE </span></span>Anyone can <a href="#To_publish_manually" class="selected">build and publish the help for reviews ad hoc</a> between scheduled batch times. </p>
+            <h3><a name="Setting_Up_the_Windows_Scheduler&#xA;________"></a>Set Up the Windows Scheduler
+</h3>
+            <p>The designated build owner follows this procedure to set up the Windows Scheduler. Because the batch process uses the Windows Task Scheduler and to prevent collisions, <b>only one person at a time</b> can be in charge of it.    </p>
+            <ol>
+                <li value="1">Open the Windows Scheduler: <b>Start &gt; Control Panel &gt; System and Security &gt;&#160;Administrative Tools &gt;&#160;Schedule tasks</b>.</li>
+                <li value="2">Right-click <b>Task Scheduler Library</b>,and then click <b>Create Task</b>.</li>
+                <li value="3">Configure these settings in the scheduler:
+			<ul><li value="1"><a href="javascript:void(0);" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="general"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />General tab</a>:&#160;Add a new local task with the user logged in.<p style="display: none;" data-mc-target-name="general"><img src="../../resources/images/scheduler_general.png" /></p></li><li value="2"><a href="javascript:void(0);" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="triggers"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Triggers tab</a>: Add a new recurring trigger and enable. <p style="display: none;" data-mc-target-name="triggers"><img src="../../resources/images/scheduler_triggers.png" /></p></li><li value="3"><a href="javascript:void(0);" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="actions"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Actions tab</a>: Add a new action to start Flare.<p style="display: none;" data-mc-target-name="actions"><img src="../../resources/images/scheduler_actions.png" /></p></li><li value="4"><a href="javascript:void(0);" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="conditions"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Conditions tab</a>: Wake the computer to run the task and do not specify a connection. The build owner must be logged into the VPN or local WTW network. <p style="display: none;" data-mc-target-name="conditions"><img src="../../resources/images/scheduler_conditions.png" /></p></li><li value="5"><a href="javascript:void(0);" class="MCToggler MCTogglerHead MCTogglerHotSpot MCToggler_Open toggler MCTogglerHotSpot_ MCHotSpotImage" data-mc-targets="settings"><img class="MCToggler_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Settings tab</a>: Allow the task to be run near the build time. <p style="display: none;" data-mc-target-name="settings"><img src="../../resources/images/scheduler_settings.png" /></p></li></ul></li>
+                <li value="4">Check the build logs once daily in the local output directory:
+C:\Workspace\TRSS1\Output\&lt;user_id&gt;\TRSS for Reviews.TRSS for Reviews.mclog. Notify authors of any warnings or errors. </li>
+            </ol>
+            <h3><a name="Help"></a>Help Review Site</h3>
+            <p>The target file system and URL for the help are shown in the target setup file <b>Project Organizer &gt; Targets &gt; TRSS for Reviews</b>. They are subject to change.</p>
+            <p><b>Tip:</b>&#160;You need permission to the US/TRC_TComm security group to publish (write)&#160;to the URLs. Submit a service desk ticket to "create or modify a distribution list" and indicate in the group name that this is a security group, not a distribution list.</p>
+            <p>The current target directory is:</p>
+            <div class="TopicContent" style="width: 200px;height: 200px;clear: right;float: right;">
+                <p>&#160;</p>
+            </div>
+            <ul>
+                <p>\\trciis-na2-201D\Design\help\TRSS</p>
+            </ul>
+            <p>The current browser URL is:</p>
+            <div class="TopicContent" style="width: 200px;height: 200px;clear: right;float: right;">
+                <p>&#160;</p>
+            </div>
+            <ul>
+                <p>http://trciis-na2-201d:82/help/TRSS/default.htm</p>
+            </ul>
+            <h3><a name="To_publish_manually"></a>Publish the TRSS-Review Help Manually</h3>
+            <ol>
+                <li value="1">Make sure that all topics in stakeholder review are included in the Master TOC.</li>
+                <li value="2">In the Flare Project Organizer pane, right-click <b>Targets &gt; TRSS for Reviews</b> and select <b>Build 'TRSS for Reviews'</b>.</li>
+                <li value="3">In the resulting Builds section in Flare, after the Status column shows Finished or Failed,  select the build line and click <b>Open Build Log</b>.</li>
+                <li value="4">If the build failed, fix the problem or notify the author. See <a href="#Troubleshooting" class="selected">Troubleshooting</a>.</li>
+                <li value="5">If the build succeeded, check Warnings in the log.<p class="note" data-mc-autonum="NOTE "><span class="autonumber"><span class="TWTeal">NOTE </span></span>While Warning messages do not break the build, they do reveal things such as broken links or links pointing to external sources that will need to be resolved.</p></li>
+                <li value="6">Right-click <b>Targets &gt; TRSS for Reviews</b> and select <b>Publish 'TRSS for Reviews'</b>.</li>
+                <li value="7">After it completes, perform a quick smoke test on the <a href="http://trciis-na2-201d:82/help/TRSS/default.htm">published help</a>. (You might need to clear cache.)</li>
+            </ol>
+            <h3><a name="TMS_Environments"></a>Add TMS&#160;Help Environments</h3>
+            <p>The current TMS environments include the TComm review site (TRSS-Reviews), the TComm-QA site (for pre-release work), and the production environments for TRSS 8.1, 8.2, 8.3, and 8.4. On occasion,&#160;TComm receives requests to add one of our help system to an environment, for example, the 8.3 Sale Demo software. </p>
+            <ol>
+                <li value="1">Alert the TComm Technical Lead (Dave Wilks) to the request. </li>
+                <li value="2">Create a new RMS (Release Management Support) ticket to update the deployment to point to the correct help location. Use the following RMS ticket as a template:&#160;http://jira.ehr.com/browse/RMS-35025.</li>
+                <li value="3">The main criteria follow:<ul><li value="1">Server name</li><li value="2">In the configuration file:&#160;ehrAppConfig.config</li><li value="3">Update the following info:<ul><li value="1"><ol><li value="1"><p>TRT.HelpAppVersion="8.4"</p></li><li value="2"><p>TRT.HelpUrlContentPath="https://tr-help.ehr.com/8_4/Default.htm"</p></li></ol></li></ul></li></ul></li>
+                <li value="4">Make the&#160;following people watchers on the ticket: TComm Technical Lead, yourself, and the requestor. </li>
+            </ol>
+            <h3><a name="Troubleshooting"></a>Troubleshooting
+        </h3>
+            <p>You might experience the following issues:</p>
+            <ul>
+                <li value="1">You get an error that an expanding body element has an empty expanding head tag.</li>
+                <ul>
+                    <li value="1">Do not put conditional text in Expanding Text as Flare embeds an additional expanding body element (with text only and an empty head tag) and this causes errors in the build process.</li>
+                    <li value="2">Move the conditional element to a non-expanding text tag and notify the author.</li>
+                </ul>
+                <li value="2">You don't see the changes in the built help.</li>
+                <ul>
+                    <li value="1">You might be viewing a cached version of the page. Clear your cache or use Chrome's Incognito window which will force the server to serve up the newest page.</li>
+                    <li value="2">Sometimes clearing the cache doesn't work. You have to clean the project of exported files. Open project in Flare. Select Project &gt; Clean Project. Then build and publish the project as usual. You should see the new changes. </li>
+                </ul>
+                <li value="3">You get an error that a certain file cannot be replaced and the build fails.</li>
+                <ul>
+                    <li value="1">Sometimes files become read-only in the Design folder. Go directly to the directory, right-click the offending file, and then clear the Read-Only check box.</li>
+                    <li value="2">Check the other files in the directory. They might have the same issue.</li>
+                    <li value="3">Here is the repository link: <a href="file://trciis-na2-201d/Design/help/TRSS">\\trciis-na2-201d\Design\help\TRSS</a></li>
+                </ul>
+                <li value="4">
+                    <p>You get a periodic build/publish fail. </p>
+                    <ul>
+                        <li value="1">Usually this is just connectivity issues if the error message is obscure and unrelated to any actual compile errors (like expanding text issues). You can run the build manually if something’s new or just wait for the next run and check the log again.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h2>Attribution:</h2>
+            <table style="width: 100%;caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../resources/tablestyles/kbtable2.css');" summary="Last updated and author information" class="TableStyle-KBTable2" cellspacing="0">
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-KBTable2-Head-Header1">
+                        <th class="TableStyle-KBTable2-HeadE-Column1-Header1">
+                            <p class="toptable"><b>Last updated:</b>
+                            </p>
+                        </th>
+                        <th class="TableStyle-KBTable2-HeadE-Column1-Header1">
+                            <p class="toptable"><b>Product:</b>
+                            </p>
+                        </th>
+                        <th class="TableStyle-KBTable2-HeadE-Column1-Header1">
+                            <p class="toptable"><b>Author: </b>
+                            </p>
+                        </th>
+                        <th class="TableStyle-KBTable2-HeadD-Column1-Header1">
+                            <p class="toptable"><b>Contributions by: </b>
+                            </p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-KBTable2-Body-Body1">
+                        <td class="TableStyle-KBTable2-BodyB-Column1-Body1">
+                            <p class="toptable">4/25/2016</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyB-Column1-Body1">
+                            <p class="toptable">TMS</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyB-Column1-Body1">
+                            <p class="toptable">Mark Cowan</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyA-Column1-Body1">
+                            <p class="toptable">Laura Praderio Lynn</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="font-size: 6pt;margin-top: 0;margin-bottom: 0;">&#160;</p>
+            <p class="copyright" style="font-size: 9pt;">Copyright © <span class="MyVariablesYear">2016</span>&#160;<span class="MyVariablesCompanyName">Willis Towers Watson</span> All rights reserved.</p>
+        </div>
+    </body>
+</html>

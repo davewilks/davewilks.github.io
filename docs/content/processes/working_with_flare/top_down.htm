@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="reference" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Authoring Tools|Flare">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>HTML5 Top Navigation</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../resources/tablestyles/kbtable2.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapGlobal.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapDom.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapUtilities.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapXhr.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTextEffects.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSlideshow.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapFeedback.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapDefault.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapHelpSystem.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapIndex.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapGlossary.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapParser.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSearch.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTopic.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#processes/working_with_flare/top_down.htm">Open topic with navigation</a>
+        </p>
+        <div class="TopicContent">
+            <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><span class="MCBreadcrumbsSelf">Authoring Tools</span><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbsSelf">Flare</span><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">HTML5 Top Navigation</span>
+            </div>
+            <h1><span class="SystemTitle">HTML5 Top Navigation</span> Workarounds</h1>
+            <h2>Summary:</h2>
+            <p>Flare's HTML 5 Top Navigation provides a more modern and responsive design. It is used for CompConnect help and other applications as well. This topic covers some of the wrokarounds needed to make Top Navigation work.</p>
+            <h2>Full Description:</h2>
+            <p>Note the following workarounds:</p>
+            <p><a href="#Poor" class="MCXref xref selected">Poor Wrapping Around the Sidebar</a>
+            </p>
+            <p><a href="#Adding" class="MCXref xref selected">Adding Text to the Header</a>
+            </p>
+            <p><a href="#Applying" class="MCXref xref selected">Applying Different Master Pages to Different Topics</a>
+            </p>
+            <h3><a name="Poor"></a>Poor Wrapping Around the Sidebar</h3>
+            <p>Take a look at these two images:</p>
+            <table style="width: 100%;">
+                <col style="width: 177px;" />
+                <col />
+                <tbody>
+                    <tr>
+                        <td><a class="MCPopupThumbnailLink MCPopupThumbnailHover" href="../images/the_basics_bad.jpg"><img class="MCPopupThumbnail img imgthumbnail" data-mc-width="1360" data-mc-height="683" src="../images/the_basics_bad_thumb_100_100.jpg" tabindex="" /></a>
+                        </td>
+                        <td><a class="MCPopupThumbnailLink MCPopupThumbnailHover" href="../images/the_basics_good.jpg"><img class="MCPopupThumbnail img imgthumbnail" data-mc-width="1360" data-mc-height="683" src="../images/the_basics_good_thumb_100_100.jpg" tabindex="" /></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>The one on the left shows some poor wrapping around the sidebar. This typically happens with drop downs and tables.</p>
+            <p>To fix this, you just need to wrap the offending element in a div that has a setting like the one shown below in CompConnect:</p>
+            <p class="code" style="border-top-style: solid;border-top-width: 1px;">Div.sideMenufix</p>
+            <p class="code">{</p>
+            <p class="code" style="text-indent: 0.5in;">overflow-x:auto;</p>
+            <p class="code" style="border-bottom-style: solid;border-bottom-width: 1px;">}</p>
+            <p>In CompConnect, this Div is called sideMenuFix. To apply it:</p>
+            <p>Select Div.sideMenuFix from the Style box, or go into the XML and add &lt;Div class="sideMenufix"&gt; right before the element. Then add &lt;/Div&gt; right after the element.</p>
+            <h3><a name="Adding"></a>Adding Text to the Header</h3>
+            <p>You might be asked to add a title, or other text, to the header area of the help. This isn't easy to do in Flare, but you can hack it using a script in the master page and some styles in the CSS.</p>
+            <p>To add a title the header area of top navigation:</p>
+            <ol>
+                <li value="1">Set up the CSS styles that you'll need: a Div and a p class.</li>
+                <p>Here's what is set up in CoCo:</p>
+                <p>
+                    <img src="../images/header_title_css.png" />
+                </p>
+                <li value="2">Open any master pages used in the help and add the following code just after the &lt;body&gt; tag:</li>
+                <p class="code" style="border-top-style: solid;border-top-width: 1px;">&lt;script type="text/javascript"&gt;</p>
+                <p class="code" style="margin-left: 10px;">$(document).ready(function(){</p>
+                <p class="code"> // add div for header text</p>
+                <p class="code"> $("a.logo").after('&lt;div class="title"&gt;&lt;p class="helpTitle"&gt;Compensation Software Help Center&lt;/p&gt;&lt;/div&gt;');</p>
+                <p class="code"> });</p>
+                <p class="code" style="border-bottom-style: solid;border-bottom-width: 1px;">&lt;/script&gt;</p>
+                <li value="3">Update the text (Compensation Software Help Center) to whatever you want to appear in the header.</li>
+                <li value="4">Update the div class and p. class to whatever you created.</li>
+            </ol>
+            <h3><a name="Applying"></a>Applying Different Master Pages to Different Topics</h3>
+            <p>In many cases, you will want a home page that looks different than other pages. At the very least, you'll want to get rid of the menu on the right. You might want to have different master pages for different types of docs.</p>
+            <p>To apply different master pages:</p>
+            <ol>
+                <li value="1">Create your alternative master page.</li>
+                <li value="2">Set up a new html class in the CSS to match your type of master page.</li>
+                <p>In CompConnect, it looks like this and is used as a landing page, thus the name.:</p>
+                <p class="code" style="border-top-style: solid;border-top-width: 1px;">html.Landing</p>
+                <p class="code">{</p>
+                <p class="code">mc-master-page: url('../MasterPages/HomePage.flmsp');</p>
+                <p class="code" style="border-bottom-style: solid;border-bottom-width: 1px;">}</p>
+                <li value="3">Update the URL with the location of your alternative master page.</li>
+                <li value="4">Go to a topic that you want to use the alternative master page.</li>
+                <li value="5">Right-click the topic in the Content Explorer, and then select Properties.</li>
+                <li value="6">Go to the Topic Properties tab.</li>
+                <li value="7">From the Topic Style Class list, select the style you created in the CSS (Landing in this example).</li>
+            </ol>
+            <p>&#160;</p>
+            <h2>Attribution:</h2>
+            <table style="width: 100%;caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../resources/tablestyles/kbtable2.css');" summary="Last updated and author information" class="TableStyle-KBTable2" cellspacing="0">
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-KBTable2-Head-Header1">
+                        <th class="TableStyle-KBTable2-HeadE-Column1-Header1">
+                            <p class="toptable"><b>Last updated:</b>
+                            </p>
+                        </th>
+                        <th class="TableStyle-KBTable2-HeadE-Column1-Header1">
+                            <p class="toptable"><b>Product:</b>
+                            </p>
+                        </th>
+                        <th class="TableStyle-KBTable2-HeadE-Column1-Header1">
+                            <p class="toptable"><b>Author: </b>
+                            </p>
+                        </th>
+                        <th class="TableStyle-KBTable2-HeadD-Column1-Header1">
+                            <p class="toptable"><b>Contributions by: </b>
+                            </p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-KBTable2-Body-Body1">
+                        <td class="TableStyle-KBTable2-BodyB-Column1-Body1">
+                            <p class="toptable">4/11/2016</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyB-Column1-Body1">
+                            <p class="toptable">all Products </p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyB-Column1-Body1">
+                            <p class="toptable">Dave</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyA-Column1-Body1">
+                            <p class="toptable">&#160;</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="font-size: 6pt;margin-top: 0;margin-bottom: 0;">&#160;</p>
+            <p class="copyright" style="font-size: 9pt;">Copyright © <span class="MyVariablesYear">2016</span>&#160;<span class="MyVariablesCompanyName">Willis Towers Watson</span> All rights reserved.</p>
+        </div>
+    </body>
+</html>

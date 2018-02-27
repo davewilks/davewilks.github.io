@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="reference" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Publications|TMS Help">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Deploying Help</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../resources/tablestyles/kbtable2.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapGlobal.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapDom.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapUtilities.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapXhr.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTextEffects.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSlideshow.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapFeedback.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapDefault.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapHelpSystem.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapIndex.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapGlossary.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapParser.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSearch.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTopic.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#product_processes/tms/deploy_help.htm">Open topic with navigation</a>
+        </p>
+        <div class="TopicContent">
+            <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><span class="MCBreadcrumbsSelf">Publications</span><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbsSelf">TMS Help</span><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Deploying Help</span>
+            </div>
+            <h1>Testing and Deploying TMS (aka TRSS) Help</h1>
+            <div style="clear: right;float: right;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;border-top-left-radius: 5px;border-top-right-radius: 5px;padding-left: 5px;padding-right: 1px;padding-top: 1px;padding-bottom: 1px;border-left-style: solid;border-left-width: 1px;border-right-style: solid;border-right-width: 1px;border-top-style: solid;border-top-width: 1px;border-bottom-style: solid;border-bottom-width: 1px;width: 234px;height: 94px;">
+                <address><a href="#Folder" class="selected">Folder Setup and Tickets</a>
+                </address>
+                <address><a href="#Help" class="selected">Help Center Prep</a>
+                </address>
+                <address><a href="#QA" class="selected">QA and Production Builds</a>
+                </address>
+                <address><a href="#Post" class="selected">Post-release Tasks</a>
+                </address>
+                <address><a href="#Update" class="selected">Update Past Release</a>
+                </address>
+            </div>
+            <h2>Summary</h2>
+            <p>Describes the process for deploying help to QA/UAT site for T-Comm testing and cleanup and then to Production site for client release. </p>
+            <p class="note" data-mc-autonum="NOTE "><span class="autonumber"><span class="TWTeal">NOTE </span></span>Begin this process about two weeks before the release date. In an ideal world, topic updates should mostly stop and focused testing should start about <b>one week</b> before the date.</p>
+            <h2><a name="Folder"></a>Folder Setup and Tickets</h2>
+            <p>About two weeks before release date:</p>
+            <ol>
+                <li value="1">In the QA and Prod server file systems, create a new folder for the release version, e.g.:<ul><li value="1">In QA: \\trtiis-na2-02q\deploy\tr-help\8.5</li><li value="2">In Production:&#160;\\trtiis-na1-06\deploy\TRHELP\8_5</li></ul></li>
+                <li value="2">Into each of the new folders, copy the following file from the parent folder:<p>HelpReceive.ashx</p></li>
+                <li value="3">Create a DevOps ticket for QA to update the following configurations in ehrAppConfig.config:<ul><li value="1">TRT.HelpAppVersion="&lt;version_number&gt;" (from step 1, above)</li><li value="2">TRT.HelpUrlContentPath="https://staging6.ehr.com/tr-help/&lt;version_folder&gt;/default.htm"</li></ul></li>
+                <li value="4">
+                    <p>For example, see <a href="http://jira.ehr.com/browse/RMS-28875">http://jira.ehr.com/browse/RMS-28875</a>.</p>Create a DevOps ticket for Prod to update the following configurations:<p><ul><li value="1">TRT.HelpAppVersion="version_number"</li></ul><ul><li value="1">TRT.HelpUrlContentPath="https://tr-help.ehr.com/&lt;version_folder&gt;/default.htm"</li></ul></p><p>For example, see <a href="http://jira.ehr.com/browse/DEVOPS-290">http://jira.ehr.com/browse/DEVOPS-290</a>.</p><p><b>IMPORTANT</b>: Add to this ticket instructions to set up internet security configuration in <b>web.config</b> files for BOTH QA and Prod environments root directories:</p><ul><li value="1">\\trtiis-na2-02q\deploy\tr-help\web.config</li><li value="2">\\trtiis-na1-06\deploy\TRHELP\web.config</li></ul><p><b><a href="http://confluence.ehr.com/display/DEVOPS/Online+Help+Setup">Per instructions in confluence</a></b>. .</p></li>
+                <li value="5">Create an RMS or DevOps ticket to set Client C to point to the released <i>Production</i> help.<p>For example, see the <a href="http://jira.ehr.com/browse/RMS-21933?focusedCommentId=499249&amp;page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-499249">comment for settings</a> in RMS-21933.</p><p>The only config settings to change are:</p><ul><li value="1">TRT.HelpAppVersion="<i>8.x</i>" [use real number]</li><li value="2">TRT.HelpUrlContentPath="https://tr-help.ehr.com/<i>8.x</i>/default.htm"</li></ul><p>We need client c to point to production for testing security features later--see <a href="#Post" class="selected">Post-release Tasks</a>.</p></li>
+            </ol>
+            <p class="note" data-mc-autonum="NOTE "><span class="autonumber"><span class="TWTeal">NOTE </span></span>Ensure the DevOps tickets are resolved before the release date.</p>
+            <h2><a name="Help"></a>Help Center Prep</h2>
+            <p>No later than two weeks before release, enter "Prelease schedule..." planning info at the top of the <a href="https://docs.google.com/spreadsheets/d/1LKbc4CZRAiicpbthryPSXRfvisFLGNW63rWxVCCofkI/edit?usp=sharing">Help Issues spreadsheet</a> and start going through the sheet entries to identify and fix issues that still need fixing. Carry out prerelease checks if not too soon -- e.g. Analyzer (see color legend at the bottom of the sheet).</p>
+            <p>A week before release, start paging through the help to find new issues. Enter in the spreadsheet for assessing priority, or fix and log there for verification in TRSS - Reviewers site (better for linking to from the sheet--direct links to QA may be blocked). </p>
+            <h2><a name="QA"></a>QA and Production Deployment</h2>
+            <p>About two weeks before release, prepare and verify build in QA environment. A week before release, prepare and verify build in Production. </p>
+            <h3>Prepare and Test QA Build</h3>
+            <p>Two weeks before release:</p>
+            <ol>
+                <li value="1">Ensure that the TRSS - Reviews TOC is up-to-date with all new topics and that the order and hierarchies are correct.</li>
+                <li value="2">With the Reviews TOC&#160;open, check out the TRSS - QA TOC.</li>
+                <li value="3">Save the Reviews TOC (File &gt; Save &gt; Save As)  under same file name used for the QA TOC. (Select all files in the dialog box to see and select the QA TOC file name.)</li>
+                <li value="4">In Projects &gt; Destinations &gt; QA_Environment, change the Directory box to the file location you created in step 1 under <a href="#Folder" class="selected">Folder Setup and Tickets</a>. <p>Also change the View URL box to use the release version number.</p></li>
+                <li value="5">In&#160;Projects &gt; Targets, right-click QA_Environment and click <b>Publish</b>. <p>(Or in the Projects menu ribbon, click <b>Publish Primary</b> (the drop-down <i>not</i> the icon) and select <b>Publish "TRSSQA_Environment"</b>.)</p></li>
+                <li value="6">Go to the View URL -- http://staging6.ehr.com/tr-help/<i>8.x</i>/default.htm -- and smoke test (verify landing page has correct publish time stamp/version number and click through a few pages and TOC&#160;links). Enter problems in google Help Issues spreadsheet.<p class="note" data-mc-autonum="NOTE "><span class="autonumber"><span class="TWTeal">NOTE </span></span>If the URL results in no-access message, use the back-door through the file system: see step 1 under <a href="#Folder" class="selected">Folders...</a> above.</p></li>
+                <li value="7">Repeat the previous two steps iteratively as content changes are made until the help is ready for release. (You can set up a different batch schedule for this if you like--just <b>be sure to turn it off</b> (clear Enable box in the batch scheduler dialog) after the release.)</li>
+            </ol>
+            <h3>Prepare and Test Production Build</h3>
+            <p>One week before release, follow the same steps used for QA, above, using the <i>production</i> TOC, Destination, and Target files, and the production site for publishing and smoke test. </p>
+            <h2><a name="Post"></a>Post-release tasks</h2>
+            <p>Soon after the release is posted, do following:</p>
+            <ul>
+                <li value="1">Zip your local TRSS1  output production folder; ./TRSS - Prod/ (faster than using published output in Timbuktu), and deposit the zip at <a href="http://nateamsites.internal.towerswatson.com/lob/dst/GDTTechComm/TRSS Source Control">http://nateamsites.internal.towerswatson.com/lob/dst/GDTTechComm/TRSS%20Source%20Control</a></li>
+                <li value="2">If you used a batch schedule for release to QA/Prod, <b>clear the check boxes</b> in the batch target setup--disable the schedule if you're using the BatchTRSSReviews setup.</li>
+                <li value="3">In both the QA and Production Destination files (in Project Organizer), change the release version folder under Directory: Either change to the future version number or surround the number with illegal characters such as { } (brackets. <p>This a failsafe measure to prevent interim accidental publication, overwriting the site content--fat fingers can happen!</p></li>
+                <li value="4">Test client help site access.<ul><li value="1">For QA:<ol><li value="1">Log on to any QA environment and click Help--ensure that the help welcome page appears and that the Last Published date at the bottom and the version number in the footer are correct.</li><li value="2">Switch browsers or dump cookies (I prefer the former).</li><li value="3">In the browser location field, try the URL for the help site--ensure the result is this error page:<p><a class="MCPopupThumbnailLink MCPopupThumbnailHover" href="../../processes/images/help_error_page.png"><img class="MCPopupThumbnail img imgthumbnail" data-mc-width="591" data-mc-height="292" src="../../processes/images/help_error_page_thumb_100_100.png" tabindex="" /></a></p><p>The URL is https://staging6.ehr.com/tr-help/&lt;version_folder&gt;/default.htm.</p></li><li value="4">If either of these tests fails, ensure that all the <a href="#Folder" class="selected">site preparation steps</a> were accomplished and that DevOps tickets were resolved. </li></ol><p>For Production:</p><ol><li value="1">Log on to Client C and click Help--ensure that the help welcome page appears and that the Last Published date at the bottom and the version number in the footer are correct.</li><li value="2">Continue with the same steps used for QA above, substituting the Prod URL at step 3--https://tr-help.ehr.com/&lt;version_folder&gt;/default.htm.</li></ol></li></ul></li>
+            </ul>
+            <ul>
+                <li value="1">In Google spreadsheet, right click the current release sheet and click <b>Duplicate</b>, then rename the sheet (right-click again) to the next release number and delete fixed items. Right-click again and <b>Move left</b>; repeat until sheet is far left.</li>
+                <li value="2">Have a party!!</li>
+            </ul>
+            <h2><a name="Update"></a>Update a Past Release</h2>
+            <p>So what happens if you need to make a small change to a help system after it deploys to a release...well instead of republishing the entire help system, just go into the release directory and change the .htm file. For example, for 8.4, go to <a href="file://trtiis-na1-06/deploy/TRHELP/8_4">\\trtiis-na1-06\deploy\TRHELP\8_4</a> and change the file with Notepad or some other editor. </p>
+            <h2>Attribution:</h2>
+            <table style="width: 100%;caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../resources/tablestyles/kbtable2.css');" summary="Last updated and author information" class="TableStyle-KBTable2" cellspacing="0">
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-KBTable2-Head-Header1">
+                        <th class="TableStyle-KBTable2-HeadE-Column1-Header1">
+                            <p class="toptable"><b>Last updated:</b>
+                            </p>
+                        </th>
+                        <th class="TableStyle-KBTable2-HeadE-Column1-Header1">
+                            <p class="toptable"><b>Product:</b>
+                            </p>
+                        </th>
+                        <th class="TableStyle-KBTable2-HeadE-Column1-Header1">
+                            <p class="toptable"><b>Author: </b>
+                            </p>
+                        </th>
+                        <th class="TableStyle-KBTable2-HeadD-Column1-Header1">
+                            <p class="toptable"><b>Contributions by: </b>
+                            </p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-KBTable2-Body-Body1">
+                        <td class="TableStyle-KBTable2-BodyE-Column1-Body1">
+                            <p class="toptable">m/d/2015</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyE-Column1-Body1">
+                            <p class="toptable">list if specific</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyE-Column1-Body1">
+                            <p class="toptable">Paris Gorman</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyD-Column1-Body1">
+                            <p class="toptable">same</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-KBTable2-Body-Body1">
+                        <td class="TableStyle-KBTable2-BodyE-Column1-Body1">
+                            <p class="toptable">4/15/2015</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyE-Column1-Body1">
+                            <p>&#160;</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyE-Column1-Body1">
+                            <p class="toptable">Mark Cowan</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyD-Column1-Body1">
+                            <p class="toptable">same</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-KBTable2-Body-Body1">
+                        <td class="TableStyle-KBTable2-BodyB-Column1-Body1">
+                            <p class="toptable">10/17/2016</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyB-Column1-Body1">
+                            <p class="toptable">Added updating a past release</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyB-Column1-Body1">
+                            <p class="toptable">Laura Praderio Lynn</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyA-Column1-Body1">
+                            <p class="toptable">same</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="font-size: 6pt;margin-top: 0;margin-bottom: 0;">&#160;</p>
+            <p class="copyright" style="font-size: 9pt;">Copyright © <span class="MyVariablesYear">2016</span>&#160;<span class="MyVariablesCompanyName">Willis Towers Watson</span> All rights reserved.</p>
+        </div>
+    </body>
+</html>

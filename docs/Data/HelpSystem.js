@@ -1,0 +1,9 @@
+var xmlHelpSystemData = "";
+xmlHelpSystemData += '<?xml version=\"1.0\" encoding=\"utf-8\"?>';
+xmlHelpSystemData += '<WebHelpSystem DefaultUrl=\"content/welcome.htm\" Toc=\"Data/Toc.js\" Index=\"Data/Index.js\" Concepts=\"Data/Concepts.js\" BrowseSequence=\"Data/BrowseSequence.js\" SearchDatabase=\"Data/Search.js\" Alias=\"Data/Alias.xml\" Synonyms=\"Data/Synonyms.xml\" SkinName=\"HTML5 - TriPane\" SkinID=\"HTML5___TriPane\" Multilingual=\"false\" Skins=\"HTML5 - TriPane\" BuildTime=\"5/4/2017 10:52:18 AM\" BuildVersion=\"13.0.6142.28919\" TargetType=\"WebHelp2\" SkinTemplateFolder=\"Skin/\" InPreviewMode=\"false\" MoveOutputContentToRoot=\"false\" ReplaceReservedCharacters=\"true\" MakeFileLowerCase=\"true\" UseCustomTopicFileExtension=\"false\" PreventExternalUrls=\"false\" EnableResponsiveOutput=\"true\" IncludeGlossarySearchResults=\"false\" ResultsPerPage=\"20\" xml:lang=\"en-us\" LanguageName=\"English\">';
+xmlHelpSystemData += '    <CatapultSkin Version=\"2\" SkinType=\"WebHelp2\" Comment=\"HTML5 skin\" Anchors=\"Width,Height\" Width=\"800\" Height=\"600\" Top=\"0\" Left=\"0\" Bottom=\"0\" Right=\"0\" Tabs=\"TOC\" DefaultTab=\"TOC\" UseBrowserDefaultSize=\"True\" UseDefaultBrowserSetup=\"True\" RemoveImagesOnSave=\"true\" EnableResponsiveOutput=\"true\" NavigationLinkTop=\"true\" Title=\"Tech Comm Standards &amp; Processes\" AutoSyncTOC=\"true\" IndexPartialWordSearch=\"false\" Name=\"HTML5 - TriPane\" SkinID=\"HTML5___TriPane\" SkinClass=\"_Skins_HTML5___TriPane\" HideNavOnStartup=\"False\" LogoUrl=\"\">';
+xmlHelpSystemData += '        <Toolbar EnableCustomLayout=\"true\" Buttons=\"Print|ExpandAll|Separator|CurrentTopicIndex|PreviousTopic|NextTopic\" />';
+xmlHelpSystemData += '        <WebHelpOptions NavigationPaneWidth=\"282\" />';
+xmlHelpSystemData += '    </CatapultSkin>';
+xmlHelpSystemData += '</WebHelpSystem>';
+MadCap.Utilities.Xhr._FilePathToXmlStringMap.Add('HelpSystem', xmlHelpSystemData);

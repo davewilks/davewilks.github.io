@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="reference" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="TMS">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Using Drop-downs and Togglers</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../resources/tablestyles/kbtable2.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapGlobal.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapDom.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapUtilities.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapXhr.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTextEffects.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSlideshow.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapFeedback.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapDefault.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapHelpSystem.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapIndex.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapGlossary.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapParser.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSearch.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTopic.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#product_processes/tms/using_dropdowns_and_togglers.htm">Open topic with navigation</a>
+        </p>
+        <div class="TopicContent">
+            <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><span class="MCBreadcrumbsSelf">TMS</span><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Drop-downs and Togglers (TMS)</span>
+            </div>
+            <h1>Using Flare Drop-downs and Togglers</h1>
+            <h2>Summary:</h2>
+            <p>Describes the use of drop-downs and togglers and the steps to create each in Flare.</p>
+            <h2>Full Description:</h2>
+            <p>These two features serve similar purposes–hiding text under "hotspots" to let readers either choose sections of a topic they're interested in or choose whether to view or skip tangential information, particularly in lists. The features also make for a lean clean look and feel.</p>
+            <p><b>Drop-downs</b>
+            </p>
+            <p>TRSS topics use drop-downs primarily for two different situations:</p>
+            <ul>
+                <li value="1">In reference topics, for window-element descriptive sections.  For example:</li>
+            </ul>
+            <p class="indent">
+                <img src="../../resources/images/dropdowntoggler1.png" />
+            </p>
+            <p class="indent">We also use nested drop-downs for application windows that contain multiple sections or sometimes "Wizards"–usually Details or Add windows.  For example:</p>
+            <p class="thirdbulletIndent">
+                <img src="../../resources/images/dropdowntoggler2.png" />
+            </p>
+            <p class="indent">There may be other use cases, depending on author choices. For example, some writers use single drop-downs inside bulleted lists to avoid inline screen shots in expanded text and accompanying nested lists.</p>
+            <p class="note" data-mc-autonum="NOTE "><span class="autonumber"><span class="TWTeal">NOTE </span></span>Using Togglers here can help reduce redundancy and provide a somewhat cleaner look. See<a href="#Togglers" class="selected">Togglers</a>.</p>
+            <ul>
+                <li value="1">In task topics, use drop-downs to list stepped procedures.  For example:</li>
+            </ul>
+            <p class="indent">
+                <img src="../../resources/images/dropdowntoggler3.png" />
+            </p>
+            <p><b>Creating Drop-downs</b>
+            </p>
+            <p>To create a drop-down, select the heading or step/list stem you want to use as a hot spot along with all the text you want to hide underneath ("drop-down body"), then <b>Insert--&gt;Drop-Down Text</b>.  See Flare Help for more info.</p>
+            <p class="note" data-mc-autonum="NOTE "><span class="autonumber"><span class="TWTeal">NOTE </span></span> For nested drop-downs, create the deepest levels first, then higher levels; if you need to add a nested drop-down into an existing one, you must first unbind the existing one.</p>
+            <p class="note" data-mc-autonum="NOTE "><span class="autonumber"><span class="TWTeal">NOTE </span></span>Sometimes the Flare dialog does not properly capture the drop-down body under the hotspot.  When this happens, you can define the hotspot paragraph only and then manually move text blocks into the drop-down body.</p>
+            <p class="note" data-mc-autonum="NOTE "><span class="autonumber"><span class="TWTeal">NOTE </span></span>KEYBOARD SHORTCUT.  To quickly move text up or into a previous XML element (when allowed), select the block in left-side structure view, then use SHIFT-ALT Up-Arrow.  (Use the down-arrow to move text down or out of an XML container, such as drop-down body.</p>
+            <p><b><a name="Togglers"></a>Creating Togglers</b>
+            </p>
+            <p>Unlike drop-downs, where the hotspot is a heading or list stem, the toggler feature provides a way to use shorter text strings as hotspots. This feature is useful in task steps, for example, that result in application popups and/or lists of optional sub-steps or nice-to-know (or self-explanatory) definitions.</p>
+            <p>Solution:</p>
+            <p>Consider using togglers to successively hide long and/or deeply nested lists.  The technique is also a recommended way to avoid inserting inline screen shots into expanded text in lists, which creates spacing problems.</p>
+            <p>Examples:</p>
+            <p>
+                <img src="../../resources/images/dropdowntoggler6.png" />
+            </p>
+            <p>
+                <img src="../../resources/images/dropdowntoggler7.png" />
+            </p>
+            <p><b>Creating Togglers</b>
+            </p>
+            <p>To create a toggler in Flare:</p>
+            <ol>
+                <li value="1">Right click the block containing the text or image that you want readers to toggle on and off (hide/show).</li>
+                <p>Use the left-side block layout.  (If it's not there, click the "Toggle show blocks" icon at bottom of the screen.)</p>
+                <p>Alternatively, you can quick-click text repeatedly until the XML element you want is highlighted.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li value="1">Select Name in right-click menu.</li>
+                    <li value="2">Give the XML element a name (no spaces).</li>
+                    <p>Ensure the name is unique for the topic.</p>
+                </ol>
+                <p class="tip" data-mc-autonum="TIP"><span class="autonumber"><span class="TWTeal">TIP</span></span>You can name any XML block in Flare, including snippet blocks; for example, hiding single-sourced field-description lists under task steps helps avoid extra scrolling one step to next.</p>
+                <li value="2">Repeat previous step for any surrounding blocks you want to control using the same toggler.</li>
+                <li value="3">Select text you want to use as a hot spot above the named targets and click Toggler in the Insert menu tab.</li>
+                <li value="4">Highlight only enough text to describe the hidden blocks clearly. Revise if needed to get a clear word grouping.</li>
+                <li value="5">In the Insert Toggler dialog, select the Named Elements you want the hot spot to control.</li>
+                <li value="6">Click OK.</li>
+                <li value="7">Preview the topic and test.</li>
+            </ol>
+            <p><b>Toggler and Popup Tips</b>
+            </p>
+            <ul>
+                <li value="1">You can’t toggle information from another file. </li>
+                <li value="2">Popups don't work in snippets.</li>
+            </ul>
+            <h2>Attribution:</h2>
+            <table style="width: 100%;caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../resources/tablestyles/kbtable2.css');" summary="Last updated and author information" class="TableStyle-KBTable2" cellspacing="0">
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-KBTable2-Head-Header1">
+                        <th class="TableStyle-KBTable2-HeadE-Column1-Header1">
+                            <p class="toptable"><b>Last updated:</b>
+                            </p>
+                        </th>
+                        <th class="TableStyle-KBTable2-HeadE-Column1-Header1">
+                            <p class="toptable"><b>Product:</b>
+                            </p>
+                        </th>
+                        <th class="TableStyle-KBTable2-HeadE-Column1-Header1">
+                            <p class="toptable"><b>Author: </b>
+                            </p>
+                        </th>
+                        <th class="TableStyle-KBTable2-HeadD-Column1-Header1">
+                            <p class="toptable"><b>Contributions by: </b>
+                            </p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-KBTable2-Body-Body1">
+                        <td class="TableStyle-KBTable2-BodyB-Column1-Body1">
+                            <p class="toptable">m/d/2015</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyB-Column1-Body1">
+                            <p class="toptable">TRSS</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyB-Column1-Body1">
+                            <p class="toptable">Mark Cowan</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyA-Column1-Body1">
+                            <p class="toptable">same</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="font-size: 6pt;margin-top: 0;margin-bottom: 0;">&#160;</p>
+            <p class="copyright" style="font-size: 9pt;">Copyright © <span class="MyVariablesYear">2016</span>&#160;<span class="MyVariablesCompanyName">Willis Towers Watson</span> All rights reserved.</p>
+        </div>
+    </body>
+</html>

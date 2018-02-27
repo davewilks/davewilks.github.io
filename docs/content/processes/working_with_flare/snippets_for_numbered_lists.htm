@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" class="reference" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Authoring Tools|Flare">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Using Snippets for Numbered Lists</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../resources/tablestyles/kbtable2.css" rel="stylesheet" />
+        <link href="../../resources/stylesheets/styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapGlobal.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapDom.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapUtilities.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapXhr.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTextEffects.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSlideshow.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapFeedback.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapDefault.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapHelpSystem.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapToc.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapIndex.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapGlossary.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapParser.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapSearch.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapTopic.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../../Default.htm#processes/working_with_flare/snippets_for_numbered_lists.htm">Open topic with navigation</a>
+        </p>
+        <div class="TopicContent">
+            <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><span class="MCBreadcrumbsSelf">Authoring Tools</span><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbsSelf">Flare</span><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Using Snippets for Numbered Lists</span>
+            </div>
+            <h1>Using Snippets for Numbered Lists </h1>
+            <h2>Summary:</h2>
+            <p>This describes a method for creating snippets for numbered lists.</p>
+            <h2>Full Description:</h2>
+            <p>One of the problems with using snippets in numbered lists is the numbering. If you create a two-step list and inject it in an existing list, the numbering will get jacked up. One way to get around this is to create the numbered snippet as a regular paragraphs, and then insert it into a numbered list. This doesn't always work though. </p>
+            <p>Alternatively, you can manage the number continuation in the topic or the snippet, as appropriate.</p>
+            <p>Append either step_ or steps_ to the snippet file name.</p>
+            <h3>Reuse the Same First Step</h3>
+            <p>You might write several topics that include the same first step. For example, to add, edit or delete pay types and pay sets, you always need to access the Pay Types page. The first step in all of these topics will be "Click Settings, and then select Pay Types." The easiest way to set up this kind of snippet is as a simple paragraph, not as an ordered list. The alternative is to create the snippet as an ordered list, insert it into the &lt;p&gt; tag in a topic, and then follow that up with an ordered list.</p>
+            <h4>To reuse the same first step:</h4>
+            <ol>
+                <li value="1">Create a new snippet with a file name that begins with step_.</li>
+                <li value="2">Enter the text of the step in the &lt;p&gt; tag.</li>
+                <li value="3">Save the snippet.</li>
+                <li value="4">In the topic where you insert the snippet, create an ordered list.</li>
+                <li value="5">Insert the snippet in the first &lt;li&gt; tag.</li>
+            </ol>
+            <h3>Reusing Multiple Steps</h3>
+            <p>You might write multiple topics that include multiple steps. For example, reordering grids in Wasabi is done in a functionally universal modal called Manage Order. However, there are multiple topics about reordering specific grid items. These topics might have different first steps, but the last steps are the same. The key to making this work is to use the Continue Sequence setting to make sure that the numbering is correct.</p>
+            <h4>To reuse multiple steps:</h4>
+            <ol>
+                <li value="1">Create a new snippet with a file name that begins with steps_.</li>
+                <li value="2">Create an ordered list.</li>
+                <li value="3">Enter the text of the steps in the ordered list.</li>
+                <li value="4">With your cursor in any list item, click the List Actions button, and then select Continue Sequence.</li>
+                <li value="5">Save the snippet.</li>
+                <li value="6">In the topic where you insert the snippet, create an ordered list.</li>
+                <li value="7">When you get to the list item where you want to insert the snippet, end the list.</li>
+                <li value="8">Insert the snippet in the &lt;p&gt; tag following the last list item.</li>
+            </ol>
+            <h2>Attribution:</h2>
+            <table style="width: 100%;caption-side: top;margin-left: 0;margin-right: auto;mc-table-style: url('../../resources/tablestyles/kbtable2.css');" summary="Last updated and author information" class="TableStyle-KBTable2" cellspacing="0">
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <col style="width: 25%;" class="TableStyle-KBTable2-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-KBTable2-Head-Header1">
+                        <th class="TableStyle-KBTable2-HeadE-Column1-Header1">
+                            <p class="toptable"><b>Last updated:</b>
+                            </p>
+                        </th>
+                        <th class="TableStyle-KBTable2-HeadE-Column1-Header1">
+                            <p class="toptable"><b>Product:</b>
+                            </p>
+                        </th>
+                        <th class="TableStyle-KBTable2-HeadE-Column1-Header1">
+                            <p class="toptable"><b>Author: </b>
+                            </p>
+                        </th>
+                        <th class="TableStyle-KBTable2-HeadD-Column1-Header1">
+                            <p class="toptable"><b>Contributions by: </b>
+                            </p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-KBTable2-Body-Body1">
+                        <td class="TableStyle-KBTable2-BodyB-Column1-Body1">
+                            <p class="toptable">m/d/2015</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyB-Column1-Body1">
+                            <p class="toptable">list if specific</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyB-Column1-Body1">
+                            <p class="toptable">&#160;</p>
+                        </td>
+                        <td class="TableStyle-KBTable2-BodyA-Column1-Body1">
+                            <p class="toptable">same</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="font-size: 6pt;margin-top: 0;margin-bottom: 0;">&#160;</p>
+            <p class="copyright" style="font-size: 9pt;">Copyright © <span class="MyVariablesYear">2016</span>&#160;<span class="MyVariablesCompanyName">Willis Towers Watson</span> All rights reserved.</p>
+        </div>
+    </body>
+</html>
